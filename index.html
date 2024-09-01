@@ -1,314 +1,323 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackbrains</title>
-  <!-- Add Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/favicon_square.ico">
-  <link href="./index.css" rel="stylesheet" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    WebFont.load({
-      google: {
-        families: ["Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic", "Gugi:100,200,300,regular"]
-      }
-    });
-  </script>
-
-  <style type="text/css">
-    body {
-      -webkit-font-smoothing: antialiased;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stackbrains_</title>
+    <!-- Add Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon_square.ico">
+    <!-- load stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector('.value-prop-slider');
+    const dotsContainer = document.querySelector('.slider-dots');
+    const dots = document.querySelectorAll('.dot');
 
+    slider.addEventListener('scroll', function () {
+      const scrollPercentage = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
+      const activeDotIndex = Math.round(scrollPercentage * (dots.length - 1));
+
+      dots.forEach((dot, index) => {
+        if (index === activeDotIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+
+      const dotContainerWidth = dotsContainer.offsetWidth;
+      const maxMove = slider.offsetWidth - dotContainerWidth;
+      const move = scrollPercentage * maxMove;
+      dotsContainer.style.transform = `translateX(${move}px)`;
+    });
+  });
+</script>
 <body>
-  <div class="page-wrapper">
-    <div data-animation="default" class="nav_component w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
-      <div class="relative">
-        <div class="padding-global">
-          <div class="container-large is-nav">
-            <a href="#" aria-current="page" class="nav_brand-logo-link w-nav-brand w--current">
-              <img src="./images/logo_with_name.png" loading="lazy" width="180" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
+<header>
+    <div class="logo">
+        <img src="assets/small-logo.png" alt="Stackbrains Logo">
+        <span class="company-name">stackbrains_</span>
     </div>
+    <!--    <nav>-->
+    <!--        <a href="#product">Product</a>-->
+    <!--        <a href="#integration">Integration</a>-->
+    <!--        <a href="#about">About Us</a>-->
+    <!--    </nav>-->
+    <div class="cta-buttons">
+        <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
+            <button class="book-a-demo-button">Book a Demo<span class="arrow">→</span></button>
+        </a>
+        <!-- <button class="contact-us">Contact Us</button> -->
+    </div>
+</header>
 
-    <main class="main-wrapper">
-      <div class="section_hero gradient-bg-home">
-        <div class="dark-layer"></div>
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="padding-section-large is-home-hero">
-              <div class="hero_wrapper">
-                <h1 class="is-h1 is-centre">Integrate 
-                  <span class="text-is-company-name">stackbrains_</span> and Supercharge your 
-                  <span class="text-is-gradient">Data 
-                    <span id="data__options"></span>
-                    <span class="data__blinking-cursor">|</span>
-                  </span>
-                </h1>
-                <div class="homepage-hero-subtext is-centre top-margin-30">Empower your team with advanced observability and enhanced visibility across your entire data stack — ensuring high Quality, Governance and Trust over Data.
-                </div>
-                <div class="button-wrapper top-margin-32">
-                  <a href="https://app.youform.com/forms/q75ibqeh" target="_blank" class="button w-inline-block">
-                    <div class="button-text">Get Started Now</div>
-                  </a>
-                </div>
-                <div class="is-centre top-margin-36">
-                  <span class="backed-by-text">Backed by</span>
-                  <a href="https://www.antler.co/" target="_blank">
-                    <img src="images/antler_vc.png" alt="VC Image" class="vc-logo">
-                  </a>
-              </div>
-              </div>
-            </div>
-          </div>
-          <div class="divider-line"></div>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Data You Can Trust, Insights You Can Act On.</h1>
+            <p>Ensure every decision is backed by reliable data. With Stackbrains, gain unmatched visibility, proactive
+                error alerts, and AI-driven consistency across your entire data stack.</p>
+            <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
+                <button class="get-started-now-button">Get Started Now <span class="arrow">→</span></button>
+            </a>
         </div>
-      </div>
-     
-      <section id="fold-2" class="section_features">
-        <div class="padding-global">
-          <div class="top-margin-36"></div>
-          <div class="container-large">
-            <div>
-              <h2 class="homepage-h2"> End-to-end data observability platform for data-driven teams</h2>
-              <div class="features-wrapper top-margin-60">
-                <div class="features">
-                  <div class="features-left">
-                    <div class="blue-text">Instant Incident Alerts</div>
-                    <div class="features-title top-margin-20">Real-time alerts, identify and resolve issues as they occur</div>
-                    <div class="feature-left-bottom-wrapp top-margin-20">
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Navigate complex data flows to pinpoint root causes of data incidents and their downstream impacts.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Get column-level lineage from databases to dashboards, assessing impact, prioritizing actions.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Proactively spot and debug errors with instant alerts, eliminating the wait for stakeholders' notifications.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="features-right">
-                    <div class="big-images-on-homepage"><img src="./images/feature_1_lineage_alerts.png" loading="lazy" width="651" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 84vw, 53vw" alt="" class="big-images-on-homepage" /></div>
-                  </div>
-                </div>
-                <div class="features">
-                  <div class="features-left">
-                    <div class="blue-text">Automated AI-Based solutions</div>
-                    <div class="features-title top-margin-20">AI and ML to Detect and Resolve Hidden Data Anomalies</div>
-                    <div class="feature-left-bottom-wrapp top-margin-20">
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Leverage AI for detailed incident analysis for swift and effective resolution.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">ML based monitors identify and get alerts for unknown issues, ensuring no anomaly goes undetected.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Automatically monitor health metrics of data assets and data ingestion based triggers.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="features-right flip">
-                    <div class="big-images-on-homepage"><img src="./images/feature_2_ai_ml.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 84vw, 53vw" alt="" width="655.5" class="big-images-on-homepage" /></div>
-                  </div>
-                </div>
-                <div class="features">
-                  <div class="features-left">
-                    <div class="blue-text">Data Governance and Quality Control</div>
-                    <div class="features-title top-margin-20">Monitor data quality and compliance across your data stack</div>
-                    <div class="feature-left-bottom-wrapp top-margin-20">
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Set manual thresholds for specific metrics and use-cases relevant to regulatory needs.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Ensure data management practices meet industry standards and regulations.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Continuously monitor data quality, ensuring high data integrity and accuracy with ease.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="features-right">
-                    <div class="big-images-on-homepage"><img src="./images/feature_3_quality.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 637.5px, 53vw" alt="" width="637.5" class="big-images-on-homepage" /></div>
-                  </div>
-                </div>
-                <div class="features">
-                  <div class="features-left">
-                    <div class="blue-text">Unified Data Ecosystem</div>
-                    <div class="features-title top-margin-20">Integrate atop existing data stack and infrastructure</div>
-                    <div class="feature-left-bottom-wrapp top-margin-20">
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Onboard your existing data stack, with seamless integration whether on-premises or in the cloud.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Streamline the data integrations with connectors across warehouses, databases and modern data tools.</div>
-                      </div>
-                      <div class="features-left-bottom">
-                        <div class="purple-dot"></div>
-                        <div class="features-left-bottom-text">Sync effortlessly with collaboration tools across preferred channels.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="features-right flip">
-                    <div class="big-images-on-homepage"><img src="./images/feature_4_integrations.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 84vw, 53vw" alt="" width="655.5" class="big-images-on-homepage" /></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="divider-line"></div>
-          </div>
+        <div class="hero-image">
+            <img src="assets/hero-laptop.png" alt="Stackbrains Dashboard">
         </div>
-      </section>
+    </section>
 
-      <div class="section_features-2">
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="padding-section-extra-large">
-              <h2 class="homepage-h2">Track issues at speed, resolve proactively with AI and maintain high quality for better decisions</h2>
-              <div class="features-3c-wrapper top-margin-60">
-                <div class="features-2-card-wrapper">
-                  <div class="gradient-for-features"></div>
-                  <div class="features-2-card-main is-home"><img src="./images/value_prop_1.png" loading="lazy" width="50" alt="" class="features-2-icon" />
-                    <div class="features-2-card-title top-margin-20">Faster Issue Detection</div>
-                    <div class="text-medium-16 top-margin-10">Pinpoint data issues precisely with lineage tracing, drastically reducing time spent identifying problems within your data setup.</div>
-                  </div>
+    <section class="backed-by-antler">
+        <span class="backed-by-text">Backed by</span>
+        <a href="https://www.antler.co/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/antler_vc.png" alt="Antler VC" class="vc-logo">
+        </a>
+    </section>
+
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card card-1">
+                <div class="card-content">
+                    <span class="feature-number">1</span>
+                    <h3>End-to-end visibility of data stacks.</h3>
+                    <p>Gain complete insight into every component and process within your data ecosystem.</p>
                 </div>
-                <div class="features-2-card-wrapper">
-                  <div class="gradient-for-features"></div>
-                  <div class="features-2-card-main is-home"><img src="./images/value_prop_2.png" loading="lazy" alt="" width="50" class="features-2-icon" />
-                    <div class="features-2-card-title top-margin-20">Proactive Resolution</div>
-                    <div class="text-medium-16 top-margin-10">Receive instant alerts to identify issues before stakeholders notify you, empowering teams to take proactive measures at speed.</div>
-                  </div>
-                </div>
-                <div class="features-2-card-wrapper">
-                  <div class="gradient-for-features"></div>
-                  <div class="features-2-card-main is-home"><img src="./images/value_prop_3.png" loading="lazy" width="40" alt="" class="features-2-icon" />
-                    <div class="features-2-card-title top-margin-20">Analyse with AI</div>
-                    <div class="text-medium-16 top-margin-10">Leverage AI to analyze incidents, providing insights into causes and efficient solutions, speeding up issue resolution.</div>
-                  </div>
-                </div>
-                <div class="features-2-card-wrapper">
-                  <div class="gradient-for-features"></div>
-                  <div class="features-2-card-main is-home"><img src="./images/value_prop_4.png" loading="lazy" width="50" alt="" class="features-2-icon" />
-                    <div class="features-2-card-title top-margin-20">Stay Compliance-Ready</div>
-                    <div class="text-medium-16 top-margin-10">Employ rigorous data quality checks to ensure compliance with regulations and simplify audit processes by identifying key data points.</div>
-                  </div>
-                </div>
-                <div class="features-2-card-wrapper">
-                  <div class="gradient-for-features"></div>
-                  <div class="features-2-card-main is-home"><img src="./images/value_prop_5.png" loading="lazy" width="50" alt="" class="features-2-icon" />
-                    <div class="features-2-card-title top-margin-20">Advanced Monitoring</div>
-                    <div class="text-medium-16 top-margin-10">Get integrated ML-based monitors to detect otherwise unnoticed data anomalies, enhancing decision-making with reliable data.</div>
-                  </div>
-                </div>
-                <div class="features-2-card-wrapper">
-                  <div class="gradient-for-features"></div>
-                  <div class="features-2-card-main is-home"><img src="./images/value_prop_6.png" loading="lazy" width="50" alt="" class="features-2-icon" />
-                    <div class="features-2-card-title top-margin-20">Collaboration Across Teams</div>
-                    <div class="text-medium-16 top-margin-10">Integrate with preferred tools to enhance communication across teams, ensuring all key stakeholders are well-informed.</div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <!-- <div class="divider-line"></div> -->
-          </div>
-        </div>
-      </div>
-
-      <div class="section_banner">
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="relative">
-              <div class="bottom-banner-on-homepage">
-                <div class="bottom-banner-content">
-                  <div class="banner-title is-centre">Ready to Transform Your Data Stack?</div>
-                  <div class="banner-subtext is-centre top-margin-16">
-                    Join the revolution in embracing the future of data observability with <span class="text-is-company-name">stackbrains_</span>
-                  </div>
-                  <a href="https://app.youform.com/forms/q75ibqeh" target="_blank" class="black-cta-banner top-margin-30 black-button-text">
-                    <div class="black-button-text">Talk to us today!</div>
-                  </a>
+            <div class="feature-card card-2">
+                <div class="card-content">
+                    <span class="feature-number">2</span>
+                    <h3>Proactive investigation of errors.</h3>
+                    <p>Identify and resolve potential data problems before they impact your operations.</p>
                 </div>
-                <div class="bottom-banner-image">
-                  <img src="images/just_logo.png" alt="Image Description">
-                  <!-- <img src="images/stackbrains_logo.png" alt="Image Description"> -->
-                </div>
-              </div>
-
             </div>
-          </div>
+            <div class="feature-card card-3">
+                <div class="card-content">
+                    <span class="feature-number">3</span>
+                    <h3>Instant alerts on data issues.</h3>
+                    <p>Stay ahead with real-time notifications when disruptions occur in your data pipeline.</p>
+                </div>
+            </div>
+            <div class="feature-card card-4">
+                <div class="card-content">
+                    <span class="feature-number">4</span>
+                    <h3>ML-based monitoring for data health.</h3>
+                    <p>Leverage machine learning to continuously monitor and maintain optimal data integrity.</p>
+                </div>
+            </div>
+            <div class="feature-card card-5">
+                <div class="card-content">
+                    <span class="feature-number">5</span>
+                    <h3>AI-driven resolution of data inconsistencies.</h3>
+                    <p>Utilize AI-driven solutions to automatically correct and prevent data anomalies.</p>
+                </div>
+            </div>
+            <div class="feature-card card-6">
+                <div class="card-content">
+                    <span class="feature-number">6</span>
+                    <h3>Custom quality checks at data ingestion.</h3>
+                    <p>Ensure data accuracy from the start with tailored validation rules at the point of entry.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="padding-section-large center-content">
-        Copyright © Stackbrains Pte. Ltd. 2024 All Rights Reserved
-      </div>
-     </main>
-  </div>
+    <section class="value-proposition">
+        <h2>Value propositions</h2>
+        <p class="section-description">Discover the Key Benefits that Drive Your Data Success. Enhance efficiency,
+            ensure compliance, and empower your team with our powerful, AI-driven solutions.</p>
+        <div class="value-prop-slider">
+            <div class="value-prop-container">
+                <div class="value-prop-card">
+                    <img src="assets/value-prop1.svg" alt="Faster Issue Detection" class="value-prop-icon">
+                    <h3>Faster Issue Detection</h3>
+                    <p>Pinpoint data issues precisely with lineage tracing, drastically reducing time spent identifying
+                        problems within your data setup.</p>
+                </div>
+                <div class="value-prop-card">
+                    <img src="assets/value-prop2.svg" alt="Proactive Resolution" class="value-prop-icon">
+                    <h3>Proactive Resolution</h3>
+                    <p>Receive instant alerts to identify issues before stakeholders notify you, empowering teams to
+                        take proactive measures at speed.</p>
+                </div>
+                <div class="value-prop-card">
+                    <img src="assets/value-prop3.svg" alt="Analyse with AI" class="value-prop-icon">
+                    <h3>Analyse with AI</h3>
+                    <p>Leverage AI to analyze incidents, providing insights into causes and efficient solutions,
+                        speeding up issue resolution.</p>
+                </div>
+                <div class="value-prop-card">
+                    <img src="assets/value-prop4.svg" alt="Stay Compliance-Ready" class="value-prop-icon">
+                    <h3>Stay Compliance-Ready</h3>
+                    <p>Employ rigorous data quality checks, ensuring compliance with regulations and streamlining
+                        processes by identifying key data points.</p>
+                </div>
+                <div class="value-prop-card">
+                    <img src="assets/value-prop5.svg" alt="Collaborative Insights" class="value-prop-icon">
+                    <h3>Collaborative Insights</h3>
+                    <p>Foster team collaboration with shared dashboards and real-time updates, enhancing overall data
+                        management efficiency.</p>
+                </div>
+                <div class="value-prop-card">
+                    <img src="assets/value-prop6.svg" alt="Customizable Workflows" class="value-prop-icon">
+                    <h3>Customizable Workflows</h3>
+                    <p>Tailor data workflows to your specific needs, ensuring optimal performance and adaptability in
+                        your unique data ecosystem.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots-container">
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    <section class="data-integration">
+        <div class="integration-background">
+            <img src="assets/data-integrations-bg.png" alt="Data Integrations Background" class="integration-bg-image">
+        </div>
+        <div class="integration-content">
+            <img src="assets/stack-sign.svg" alt="Stack Symbol" class="stack-symbol">
+            <h2>Data</h2>
+            <h2>Stack</h2>
+            <h2>Integration</h2>
+        </div>
+    </section>
 
-  <script>
-    function startTypingEffect() {
-        const texts = ["Teams", "Stack", "Reports", "Infra"];
-        let count = 0;
-            let index = 0;
-            let currentText = '';
-            let letter = '';
-            let isDeleting = false;
-            let speed = 100; // Adjust typing speed
+    <section class="faq-section">
+        <h2>Frequently asked Questions</h2>
+        <!--        <p class="faq-description">Quick answers to questions you may have. Can't find what you're looking for? Check out our full documentation.</p>-->
 
-            function type() {
-                if (count === texts.length) {
-                    count = 0;
-                }
-                currentText = texts[count];
-                if (!isDeleting) {
-                    letter = currentText.slice(0, ++index);
-                    speed = 100; // Normal typing speed
-                } else {
-                    letter = currentText.slice(0, --index);
-                    speed = 50; // Faster delete speed
-                }
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-icon">
+                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
+                </div>
+                <div class="faq-content">
+                    <h3>What is Stackbrains, and how can it help my business?</h3>
+                    <p>Stackbrains is an advanced observability and data management platform designed to provide
+                        end-to-end visibility across your entire data stack. It helps ensure data quality, governance,
+                        and trust, allowing your business to make informed decisions based on accurate and reliable
+                        data.</p>
+                </div>
+            </div>
 
-                document.getElementById('data__options').textContent = letter;
+            <div class="faq-item">
+                <div class="faq-icon">
+                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
+                </div>
+                <div class="faq-content">
+                    <h3>How does Stackbrains ensure data quality and trust?</h3>
+                    <p>Stackbrains uses a combination of custom quality checks, machine learning-based monitoring, and
+                        AI-driven solutions to proactively identify and resolve data inconsistencies. This ensures that
+                        your
+                        data is always accurate, up-to-date, and trustworthy.</p>
+                </div>
+            </div>
 
-                if (!isDeleting && letter.length === currentText.length) {
-                    speed = 2000; // Extended pause at the end of a word
-                    setTimeout(() => {
-                        isDeleting = true;
-                    }, speed);
-                } else if (isDeleting && letter.length === 0) {
-                    isDeleting = false;
-                    count++;
-                    index = 0;
-                    speed = 500; // Pause before starting new text
-                }
+            <div class="faq-item">
+                <div class="faq-icon">
+                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
+                </div>
+                <div class="faq-content">
+                    <h3>Can Stackbrains integrate with my existing data infrastructure?</h3>
+                    <p>Yes, Stackbrains is designed to integrate seamlessly with your existing data stack. Whether
+                        you're
+                        using cloud-based data warehouses, on-premises databases, or a hybrid approach, Stackbrains
+                        provides
+                        comprehensive observability and monitoring across all your data sources.</p>
+                </div>
+            </div>
 
-                setTimeout(type, isDeleting ? speed / 2 : speed);
-            }
+            <div class="faq-item">
+                <div class="faq-icon">
+                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
+                </div>
+                <div class="faq-content">
+                    <h3>How does Stackbrains handle data security during implementation?</h3>
+                    <p>Stackbrains takes data security seriously. During implementation, we ensure that all data
+                        connections are encrypted, access controls are properly configured, and only authorized users
+                        have access to sensitive data. We also provide audit logs to track user activities and data
+                        changes.</p>
 
-            type();
-    }
+                </div>
+            </div>
 
-    startTypingEffect();
-  </script>
-  
+            <div class="faq-item">
+                <div class="faq-icon">
+                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
+                </div>
+                <div class="faq-content">
+                    <h3>How long does it take to fully implement Stackbrains?</h3>
+                    <p>The implementation timeline for Stackbrains can vary depending on the complexity of your data
+                        stack and the level of customization required. Typically, the initial setup can be completed
+                        within a few days, with full implementation, including custom configurations and user training,
+                        taking between 2 and 4 weeks.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-icon">
+                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
+                </div>
+                <div class="faq-content">
+                    <h3>What are the system requirements for deploying Stackbrains?</h3>
+                    <p>Stackbrains is designed to be flexible and can be deployed in various environments, including
+                        cloud-based platforms (like AWS, GCP, Azure) and on-premises servers. The exact system
+                        requirements will depend on the scale of your data operations, but generally, you'll need a
+                        robust server environment with adequate storage and processing power to handle your data
+                        volumes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="final-section">
+        <div class="final-content">
+            <h2>Ready to Transform Your Data Stack?</h2>
+            <p>Join the revolution in embracing the future of data observability with <span class="company-name">stackbrains_</span>
+            </p>
+            <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
+                <button class="talk-to-us-today-button">Talk to us Today !</button>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="logo">
+                    <img src="assets/small-logo.png" alt="Stackbrains Logo">
+                    <span class="company-name">stackbrains_</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/stackbrains/" target="_blank" class="linkedin">
+                        <img src="assets/linkedin_logo.svg" alt="LinkedIn">
+                    </a>
+                    <!--                    <a href="#" class="twitter">-->
+                    <!--                        <img src="assets/twitter_logo.svg" alt="Twitter">-->
+                    <!--                    </a>-->
+                </div>
+            </div>
+            <!--            <nav class="footer-nav">-->
+            <!--                <a href="#product">Product</a>-->
+            <!--                <a href="#integration">Integration</a>-->
+            <!--                <a href="#about-us">About Us</a>-->
+            <!--            </nav>-->
+            <div class="footer-contact">
+                <a href="mailto:connect@stackbrains.dev" class="email">connect@stackbrains.dev</a>
+                <a href="tel:+6590884192" class="phone">+65 9088 4192</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © Stackbrains Pte. Ltd. 2024 All Rights Reserved</p>
+        </div>
+    </footer>
+</main>
 </body>
-
 </html>
