@@ -140,14 +140,14 @@
 }
 
 .feature-item h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 1.5rem;
 }
 
 .feature-item p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -157,7 +157,6 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    /*box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/
 }
 
 

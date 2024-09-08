@@ -37,6 +37,10 @@ body {
     background-color: var(--site-background-color);
 }
 
+.active-header {
+    border-bottom: #000000 2px solid;
+}
+
 header {
     display: flex;
     justify-content: space-between;
