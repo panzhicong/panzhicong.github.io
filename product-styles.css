@@ -1,0 +1,249 @@
+/* Product Hero Styles */
+.product-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 5%;
+    background-color: var(--site-background-color);
+    margin: 0 5%;
+    text-align: center;
+}
+
+.product-hero-content {
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.product-hero h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.product-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.product-hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.product-hero-image {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.product-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Product Benefits Styles */
+.product-benefits {
+    padding: 4rem 5%;
+    background-color: var(--site-background-color);
+    /*text-align: center;*/
+}
+
+.product-benefits h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+
+.product-benefit-description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.benefit-item {
+    flex: 1;
+    text-align: left;
+}
+
+.benefit-image {
+    /*background-color: var(--grey-block-color);*/
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-image img {
+    width: 80%;
+    border-radius: 16px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.benefit-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.product-features {
+    padding: 4rem 5%;
+    background-color: var(--site-background-color);
+    /*background-color: #ffffff;*/
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+    gap: 4rem;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.feature-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.feature-item h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature-item p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/*.feature-item li {*/
+/*    font-size: 1.25rem;*/
+/*    color: var(--text-secondary);*/
+/*    line-height: 1.6;*/
+/*    margin-bottom: 1rem;*/
+/*    !*padding: 0 1rem; !* add some horizontal padding *!*!*/
+/*    !*display: inline-block; !* or flex, depending on your layout *!*!*/
+/*    !*vertical-align: middle;*!*/
+/*    !*list-style-type: square; !* or circle, square, etc. *!*!*/
+/*    list-style-position: inside; !* or outside, depending on your layout *!*/
+/*}*/
+
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        text-align: left;
+        gap: 2rem;
+    }
+
+    .feature-content,
+    .feature-image {
+        max-width: 100%;
+    }
+
+    .feature-image {
+        order: -1; /* This ensures the image always appears above the text on smaller screens */
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .product-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-hero p {
+        font-size: 1rem;
+    }
+
+    .product-benefits h2 {
+        font-size: 2rem;
+    }
+
+    .product-benefit-description {
+        font-size: 1rem;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.9rem;
+    }
+
+    .product-features {
+        padding: 3rem 5%;
+    }
+
+    .feature-item {
+        margin-bottom: 4rem;
+    }
+
+    .feature-item h2 {
+        font-size: 2rem;
+    }
+
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+}
