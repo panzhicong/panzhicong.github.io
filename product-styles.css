@@ -85,14 +85,15 @@
 }
 
 .benefit-image {
-    background-color: var(--grey-block-color);
+    /*background-color: var(--grey-block-color);*/
     border-radius: 16px;
     padding: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .benefit-image img {
-    width: 75%;
+    width: 80%;
+    border-radius: 16px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -103,12 +104,14 @@
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .benefit-item p {
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.5;
+    text-align: center;
 }
 
 
@@ -152,6 +155,19 @@
     line-height: 1.6;
     margin-bottom: 1rem;
 }
+
+/*.feature-item li {*/
+/*    font-size: 1.25rem;*/
+/*    color: var(--text-secondary);*/
+/*    line-height: 1.6;*/
+/*    margin-bottom: 1rem;*/
+/*    !*padding: 0 1rem; !* add some horizontal padding *!*!*/
+/*    !*display: inline-block; !* or flex, depending on your layout *!*!*/
+/*    !*vertical-align: middle;*!*/
+/*    !*list-style-type: square; !* or circle, square, etc. *!*!*/
+/*    list-style-position: inside; !* or outside, depending on your layout *!*/
+/*}*/
+
 
 .feature-image img {
     width: 100%;
