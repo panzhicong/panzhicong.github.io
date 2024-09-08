@@ -449,6 +449,140 @@ h1 {
     line-height: 1.2;
 }
 
+/* About Us Section Styles */
+.about-us {
+    padding: 4rem 5%;
+    background-color: var(--site-background-color);
+    margin-top: 2rem; /* Add space from previous section */
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-align: left; /* Align left like other sections */
+}
+
+.about-us-description {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.member-bio {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.member-bio p {
+    margin: 2rem 5% 0 5%;
+}
+
+
+/* Our Story Section Styles */
+.our-story {
+    padding: 4rem 5%;
+    background-color: var(--site-background-color);
+}
+
+.our-story h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.our-story .subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.story-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.story-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 100%; /* Add this line */
+}
+
+.story-image img {
+    width: 100%;
+    /*height: auto;*/
+    /*height: 100%; !* Change from auto to 100% *!*/
+    object-fit: cover; /* Change from border-radius to object-fit */
+    border-radius: 16px;
+}
+
+.story-text {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 1rem; /* Add some padding to match the image's border-radius */
+}
+
+.story-text p {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+}
+
+.story-text .emphasized {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.story-text .sub-emphasized {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+
 .faq-section {
     padding: 80px 5%;
     background-color: var(--site-background-color);
@@ -670,6 +804,27 @@ footer {
     .value-prop-card {
         flex: 0 0 calc(50% - 1rem);
     }
+
+    .about-us-container {
+        flex-direction: column;
+    }
+
+    .team-member {
+        margin-bottom: 2rem;
+    }
+
+    .story-content {
+        flex-direction: column;
+    }
+
+    .story-image, .story-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .story-image {
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -712,6 +867,44 @@ footer {
         left: 50%;
         width: 80%;
         max-width: 300px;
+    }
+
+    .about-us {
+        padding: 3rem 5%;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .member-name {
+        font-size: 1.2rem;
+    }
+
+    .member-bio {
+        font-size: 0.85rem;
+    }
+
+
+    .our-story {
+        padding: 3rem 5%;
+    }
+
+    .our-story h2 {
+        font-size: 2rem;
+    }
+
+    .story-text p {
+        font-size: 0.85rem;
+    }
+
+    .story-text .emphasized {
+        font-size: 1rem;
     }
 
     .faq-grid {
@@ -768,5 +961,50 @@ footer {
     .feature-card p,
     .value-prop-card p {
         font-size: 0.875rem;
+    }
+
+    .about-us {
+        padding: 2rem 5%;
+    }
+
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .member-name {
+        font-size: 1.1rem;
+    }
+
+    .member-bio {
+        font-size: 0.8rem;
+    }
+
+    .our-story {
+        padding: 2rem 5%;
+    }
+
+    .our-story h2 {
+        font-size: 1.8rem;
+    }
+
+    .our-story .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .story-text p {
+        font-size: 0.8rem;
+    }
+
+    .story-text .emphasized {
+        font-size: 0.95rem;
     }
 }
