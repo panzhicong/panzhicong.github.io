@@ -565,26 +565,32 @@ h1 {
     padding: 1rem; /* Add some padding to match the image's border-radius */
 }
 
+.story-text a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .story-text p {
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: clamp(0.8rem, 1.2vw, 1.3rem); /* Adjusts from 0.8rem to 1.3rem based on screen size */
     color: var(--text-secondary);
 }
 
 .story-text .emphasized {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.1vw, 1.1rem); /* Adjusts from 1rem to 1.1rem based on screen size */
     font-weight: 600;
     color: var(--text-color);
 }
 
 .story-text .sub-emphasized {
     font-weight: 600;
+    font-size: clamp(1rem, 1.2vw, 1.1rem); /* Adjusts from 1rem to 1.1rem */
     color: var(--text-color);
 }
 
 
 .faq-section {
-    padding: 80px 5%;
+    padding: 30px 5%;
     background-color: var(--site-background-color);
 }
 
@@ -820,6 +826,10 @@ footer {
     .story-image, .story-text {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .story-text p {
+        font-size: 1rem
     }
 
     .story-image {
