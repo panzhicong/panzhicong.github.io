@@ -175,6 +175,11 @@
     border-radius: 8px;
 }
 
+.feature-image.vid-1 {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Responsive styles */
 @media (max-width: 1024px) {
@@ -200,7 +205,11 @@
     }
 
     .feature-image {
-        order: -1; /* This ensures the image always appears above the text on smaller screens */
+        order: -1; /* image above text on smaller screens by default */
+    }
+
+    .feature-image.vid-1 {
+        order: 1; /* video below feature-content on mobile */
     }
 }
 
