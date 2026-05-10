@@ -1,412 +1,1295 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackbrains.AI</title>
-    <!-- Add Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon_square.ico">
-    <!-- load stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.querySelector('.value-prop-slider');
-    const dotsContainer = document.querySelector('.slider-dots');
-    const dots = document.querySelectorAll('.dot');
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Stackbrains AI | AI-Native Operating Platform for Manufacturing</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon_square.ico" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+            rel="stylesheet"/>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <!-- ========================================
+             STICKY HEADER (BANNER + NAV)
+             ======================================== -->
+        <header class="sticky-header">
+            <!-- ========================================
+                 TOP BANNER SECTION
+                 ======================================== -->
+            <div class="top-banner">
+                Stackbrains AI — Backed by Antler VC | AI-Native Operating Platform for Manufacturing SMEs
+                <span class="close-btn">✕</span>
+            </div>
 
-    slider.addEventListener('scroll', function () {
-      const scrollPercentage = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
-      const activeDotIndex = Math.round(scrollPercentage * (dots.length - 1));
-
-      dots.forEach((dot, index) => {
-        if (index === activeDotIndex) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-
-      const dotContainerWidth = dotsContainer.offsetWidth;
-      const maxMove = slider.offsetWidth - dotContainerWidth;
-      const move = scrollPercentage * maxMove;
-      dotsContainer.style.transform = `translateX(${move}px)`;
-    });
-  });
-</script>
-<body>
-<header>
-    <div class="logo">
-        <img src="assets/small-logo.png" alt="Stackbrains Logo">
-        <!--        <a href="https://stackbrains.ai">-->
-        <a href="index.html">
-            <span class="company-name">Stackbrains AI</span>
-        </a>
-    </div>
-    <nav>
-        <a href="product.html">Solution</a>
-        <a href="integrations.html">Process</a>
-        <a href="#about-us">About Us</a>
-    </nav>
-    <div class="cta-buttons">
-        <a href="https://app.youform.com/forms/vrxdmcgh" target="_blank">
-            <button class="book-a-demo-button">Book a Demo<span class="arrow">→</span></button>
-        </a>
-        <!-- <button class="contact-us">Contact Us</button> -->
-    </div>
-</header>
-
-<main>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>The AI-Native Operating Platform for Manufacturing SMEs.</h1>
-            <p>Empowering manufacturers to connect sales, production, and costs with real-time & AI-driven intelligence — not outdated systems.</p>
-            <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
-                <button class="get-started-now-button">Get Started Now <span class="arrow">→</span></button>
-            </a>
-        </div>
-        <div class="hero-image">
-            <img src="assets/hero_laptop_AIOps_stackbrains.png" alt="Stackbrains Dashboard">
-        </div>
-    </section>
-
-    <section class="backed-by-antler">
-        <span class="backed-by-text">Backed by</span>
-        <a href="https://www.antler.co/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/antler_vc.png" alt="Antler VC" class="vc-logo">
-        </a>
-    </section>
-
-    <section class="features">
-        <h2>Our Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card card-1">
-                <div class="card-content">
-                    <span class="feature-number">1</span>
-                    <h3>AI Agents for Operational Intelligence.</h3>
-                    <p>Embedded AI agents continuously analyze data across sales, production, and costs to highlight risks, opportunities, and next actions.</p>
-                </div>
-            </div>
-            <div class="feature-card card-2">
-                <div class="card-content">
-                    <span class="feature-number">2</span>
-                    <h3>Unified Operating Platform.</h3>
-                    <p>A single source of truth connecting customers, orders, production plans, inventory, and procurement.</p>
-                </div>
-            </div>
-            <div class="feature-card card-3">
-                <div class="card-content">
-                    <span class="feature-number">3</span>
-                    <h3>Workflow Automation Engine.</h3>
-                    <p>Automate approvals, task handoffs, and routine operational processes across departments.</p>
-                </div>
-            </div>
-            <div class="feature-card card-4">
-                <div class="card-content">
-                    <span class="feature-number">4</span>
-                    <h3>Real-Time Mini-Apps & Mobile Access.</h3>
-                    <p>Lightweight apps deliver live insights to managers and frontline teams — anytime, anywhere.</p>
-                </div>
-            </div>
-            <div class="feature-card card-5">
-                <div class="card-content">
-                    <span class="feature-number">5</span>
-                    <h3>Voice & Natural Language Interface.</h3>
-                    <p>Use voice or plain language to input data, query the system, and generate insights faster.</p>
-                </div>
-            </div>
-            <div class="feature-card card-6">
-                <div class="card-content">
-                    <span class="feature-number">6</span>
-                    <h3>Modular, Scalable Architecture.</h3>
-                    <p>Start with core workflows and expand with industry-specific modules as the business grows.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="value-proposition">
-        <h2>Value propositions</h2>
-        <p class="section-description">Discover the Key Factors that Drive Your Business Success. Enhance efficiency,
-            and empower your team with our powerful, AI-driven solutions.</p>
-        <div class="value-prop-slider">
-            <div class="value-prop-container">
-                <div class="value-prop-card">
-                    <img src="assets/value-prop1.svg" alt="Faster Issue Detection" class="value-prop-icon">
-                    <h3>Designed for Manufacturing</h3>
-                    <p>Built specifically for manufacturing SMEs — from sales orders to production planning, purchasing, and delivery.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop2.svg" alt="Proactive Resolution" class="value-prop-icon">
-                    <h3>AI Embedded into Daily Operations</h3>
-                    <p>AI agents work inside workflows to automate tasks and surface actionable insights.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop3.svg" alt="Analyse with AI" class="value-prop-icon">
-                    <h3>Fast to Deploy, Easy to Use</h3>
-                    <p>Modern interfaces, mini-apps, and natural language input dramatically reduce adoption friction.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop4.svg" alt="Stay Compliance-Ready" class="value-prop-icon">
-                    <h3>Replace Fragmented, Legacy Systems</h3>
-                    <p>Unify CRM and ERP into one intelligent platform that eliminates data silos and manual work.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop5.svg" alt="Collaborative Insights" class="value-prop-icon">
-                    <h3>Collaborative Insights</h3>
-                    <p>Foster team collaboration with shared dashboards and real-time updates, enhancing overall data
-                        management efficiency.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop6.svg" alt="Customizable Workflows" class="value-prop-icon">
-                    <h3>Customizable Workflows</h3>
-                    <p>Tailor data workflows to your specific needs, ensuring optimal performance and adaptability in
-                        your unique data ecosystem.</p>
-                </div>
-            </div>
-        </div>
-        <div class="slider-dots-container">
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
-    <section class="data-integration">
-        <div class="integration-background">
-            <img src="assets/AI_for_Manufacturing.png" alt="Data Integrations Background" class="integration-bg-image">
-        </div>
-    </section>
-
-    <section id="about-us" class="section our-story">
-        <h2>Our Story</h2>
-        <p class="about-us-description">Meet our founder, the brain behind Stackbrains!</p>
-        <div class="story-content">
-            <div class="story-image">
-                <img src="assets/zhicong_new.jpeg" alt="Our Story">
-            </div>
-            <div class="story-text">
-                <a href="https://www.linkedin.com/in/zhicongpan/" target="_blank">
-                    <p class="sub-emphasized">Zhicong Pan, Founder & CEO</p>
+            <!-- ========================================
+                 NAVIGATION SECTION
+                 ======================================== -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img
+                        src="assets/images/logo-1.jpg"
+                        alt="Stackbrains AI"
+                        style="width: 30px; height: 30px; object-fit: contain"
+                    />
+                    <span style="font-size: 1.1rem; font-weight: 400; letter-spacing: 0.01em; color: var(--text-dark); font-family: 'Gugi', sans-serif;">Stackbrains AI</span>
                 </a>
-                <p>
-                    With over 15 years in data management and analytics, Zhicong has led digital transformations for
-                    major organizations, including building innovative data solutions that have reshaped decision-making
-                    processes. His expertise spans industries like Airlines, Finance, Retail, Transportation, and Teleco, where he has
-                    solved complex data challenges and driven strategic growth.
-                </p>
-                <p class="sub-emphasized">My AI Journey: Crafting Confidence with AI</p>
-                <p>For over 15 years, I've believed data's promise is to create clarity and understanding. My journey with AI is about making that promise a reality.</p>
 
-                <p>I saw this challenge at a custom manufacturing studio. brilliant artisans were frustrated. Miscommunication over designs led to waste, 
-                    costly rework, and unhappy customers. They had years of data, but it was trapped in siloed systems, unable to help.
-                </p>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                 <p>This was where my AI journey found its purpose. We built a bridge of understanding. By integrating an AI-driven tool into their workflow, 
-                     we gave them a new language. A request for a "sunny, Mediterranean-inspired window" could now be instantly clarified and visualized, 
-                     ensuring perfect alignment before any building began.
-                 </p>
-
-                 <p>The result was more than metrics—a 15% increase in conversions and a 5% rise in sales. It was the team's renewed confidence. 
-                     They could now guarantee perfection, protect their craft, and ensure every customer felt understood.
-                 </p>
-
-                <p>This experience crystallized my belief: Data and AI are generous tools. They don't replace human ingenuity; 
-                    they amplify it to build trust and finally keep the promise data always held.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section">
-        <h2>Frequently asked Questions</h2>
-        <!--        <p class="faq-description">Quick answers to questions you may have. Can't find what you're looking for? Check out our full documentation.</p>-->
-
-        <div class="faq-grid">
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>What is Stackbrains, and how can it help my business?</h3>
-                    <p>Stackbrains is an advanced AI-native operating platform designed to empower SME manufacturers
-                        to improve efficiency by 10X. It allows our SME customers to make informed decisions 
-                        based on accurate, reliable and real-time data insights.</p>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Solution</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="integrations.html">Process</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="https://app.youform.com/forms/vrxdmcgh" target="_blank" class="btn btn-demo">Book a Demo</a>
+                    </div>
                 </div>
             </div>
+        </nav>
+        </header>
 
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>How does Stackbrains ensure data security and trust?</h3>
-                    <p>Stackbrains uses a combination of custom quality checks, machine learning-based monitoring, and
-                        AI-driven solutions to proactively identify and resolve data inconsistencies. This ensures that
-                        your
-                        data is always accurate, up-to-date, and trustworthy.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>Can Stackbrains integrate with my existing data infrastructure?</h3>
-                    <p>Yes, Stackbrains is designed to integrate seamlessly with your existing data stack. Whether
-                        you're
-                        using cloud-based data warehouses, on-premises databases, or a hybrid approach, Stackbrains
-                        provides
-                        comprehensive observability and monitoring across all your data sources.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>How does Stackbrains handle data security during implementation?</h3>
-                    <p>Stackbrains takes data security seriously. During implementation, we ensure that all data
-                        connections are encrypted, access controls are properly configured, and only authorized users
-                        have access to sensitive data. We also provide audit logs to track user activities and data
-                        changes.</p>
-
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>How long does it take to fully implement Stackbrains?</h3>
-                    <p>The implementation timeline for Stackbrains can vary depending on the complexity of your data
-                        stack and the level of customization required. Typically, the initial setup can be completed
-                        within a few days, with full implementation, including custom configurations and user training,
-                        taking between 2 and 4 weeks.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>What are the system requirements for deploying Stackbrains?</h3>
-                    <p>Stackbrains is designed to be flexible and can be deployed in various environments, including
-                        cloud-based platforms (like AWS, GCP, Azure) and on-premises servers. The exact system
-                        requirements will depend on the scale of your data operations, but generally, you'll need a
-                        robust server environment with adequate storage and processing power to handle your data
-                        volumes.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section class="final-section">
-        <div class="final-content">
-            <h2>Ready to Transform Your Business With Real Impacts?</h2>
-            <p>Join the revolution in embracing the future of AI-driven Operating Platform with <span class="company-name">Stackbrains AI</span>
+        <!-- ========================================
+             HERO SECTION
+             ======================================== -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">
+                The AI-Native Operating Platform for Manufacturing SMEs.
+            </h1>
+            <p class="hero-subtitle">
+                Empowering manufacturers to connect sales, production, and
+                costs with real-time &amp; AI-driven intelligence — not outdated systems.
             </p>
-            <a href="https://app.youform.com/forms/vrxdmcgh" target="_blank">
-                <button class="talk-to-us-today-button">Talk to us Today !</button>
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="logo">
-                    <img src="assets/small-logo.png" alt="Stackbrains Logo">
-                    <span class="company-name">Stackbrains AI</span>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/company/stackbrains-ai/" target="_blank" class="linkedin">
-                        <img src="assets/linkedin_logo.webp" alt="LinkedIn">
-                    </a>
-                    <!--                    <a href="#" class="twitter">-->
-                    <!--                        <img src="assets/twitter_logo.svg" alt="Twitter">-->
-                    <!--                    </a>-->
+            <a href="https://app.youform.com/forms/q75ibqeh" target="_blank" class="btn btn-hero">Get Started Now →</a>
+                <div class="video-wrapper">
+                    <div class="video-container">
+                        <video
+                            poster="assets/images/hero_laptop_AIOps_stackbrains.png"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                        ></video>
+                    </div>
                 </div>
             </div>
-            <!--                        <nav class="footer-nav">-->
-            <!--                            <a href="#product">Product</a>-->
-            <!--                            <a href="#integration">Integration</a>-->
-            <!--                            <a href="#about-us">About Us</a>-->
-            <!--                        </nav>-->
-            <div class="footer-contact">
-                <a href="mailto:grow@stackbrains.ai" class="email">grow@stackbrains.ai</a>
-                <a href="tel:+6590884192" class="phone">+65 9088 4192</a>
+        </section>
+
+        <!-- ========================================
+             FEATURES SECTION - Stackbrains AI
+             ======================================== -->
+        <section class="solution-section" id="features">
+            <div class="solution-header">
+                <div class="solution-preheader">
+                    <div class="solution-preheader-icon"></div>
+                    <span class="solution-preheader-text">Our features</span>
+                </div>
+                <h2 class="solution-title">
+                    AI Platform Built for Manufacturing Operations
+                </h2>
+            </div>
+            <div class="solution-cards bento-grid-3">
+                <div class="bento-box" style="min-height: 200px; justify-content: flex-start; align-items: stretch;">
+                    <div class="bento-content" style="box-shadow: none;">
+                        <div class="bento-label">01</div>
+                        <h3 class="bento-heading">AI Agents for Operational Intelligence.</h3>
+                        <p class="bento-description">Embedded AI agents continuously analyze data across sales, production, and costs to highlight risks, opportunities, and next actions.</p>
+                    </div>
+                </div>
+                <div class="bento-box" style="min-height: 200px; justify-content: flex-start; align-items: stretch;">
+                    <div class="bento-content" style="box-shadow: none;">
+                        <div class="bento-label">02</div>
+                        <h3 class="bento-heading">Unified Operating Platform.</h3>
+                        <p class="bento-description">A single source of truth connecting customers, orders, production plans, inventory, and procurement.</p>
+                    </div>
+                </div>
+                <div class="bento-box" style="min-height: 200px; justify-content: flex-start; align-items: stretch;">
+                    <div class="bento-content" style="box-shadow: none;">
+                        <div class="bento-label">03</div>
+                        <h3 class="bento-heading">Workflow Automation Engine.</h3>
+                        <p class="bento-description">Automate approvals, task handoffs, and routine operational processes across departments.</p>
+                    </div>
+                </div>
+                <div class="bento-box" style="min-height: 200px; justify-content: flex-start; align-items: stretch;">
+                    <div class="bento-content" style="box-shadow: none;">
+                        <div class="bento-label">04</div>
+                        <h3 class="bento-heading">Real-Time Mini-Apps &amp; Mobile Access.</h3>
+                        <p class="bento-description">Lightweight apps deliver live insights to managers and frontline teams — anytime, anywhere.</p>
+                    </div>
+                </div>
+                <div class="bento-box" style="min-height: 200px; justify-content: flex-start; align-items: stretch;">
+                    <div class="bento-content" style="box-shadow: none;">
+                        <div class="bento-label">05</div>
+                        <h3 class="bento-heading">Voice &amp; Natural Language Interface.</h3>
+                        <p class="bento-description">Use voice or plain language to input data, query the system, and generate insights faster.</p>
+                    </div>
+                </div>
+                <div class="bento-box" style="min-height: 200px; justify-content: flex-start; align-items: stretch;">
+                    <div class="bento-content" style="box-shadow: none;">
+                        <div class="bento-label">06</div>
+                        <h3 class="bento-heading">Modular, Scalable Architecture.</h3>
+                        <p class="bento-description">Start with core workflows and expand with industry-specific modules as the business grows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             LOGO CAROUSEL SECTION - Trusted Companies
+             ======================================== -->
+        <section class="logo-carousel-section">
+            <div class="logo-carousel-wrapper">
+                <div class="trusted-text">
+                    <p>Our Core Capabilities</p>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- First set -->
+                        <div class="logo-item neuron">
+                            <img src="assets/images/c-1.png" alt="Designed for Manufacturing" />
+                        </div>
+                        <div class="logo-item carousell">
+                            <img src="assets/images/c-2.jpg" alt="AI Embedded" />
+                        </div>
+                        <div class="logo-item yuu">
+                            <img src="assets/images/c-3.png" alt="Fast to Deploy" />
+                        </div>
+                        <div class="logo-item getgo">
+                            <img src="assets/images/c-4.jpg" alt="Replace Legacy Systems" />
+                        </div>
+                        <div class="logo-item carsome">
+                            <img src="assets/images/c-5.png" alt="Collaborative Insights" />
+                        </div>
+                        <div class="logo-item shopback">
+                            <img src="assets/images/c-6.jpg" alt="Customizable Workflows" />
+                        </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="logo-item neuron">
+                            <img src="assets/images/c-7.jpg" alt="Designed for Manufacturing" />
+                        </div>
+                        <div class="logo-item carousell">
+                            <img src="assets/images/c-2.jpg" alt="AI Embedded" />
+                        </div>
+                        <div class="logo-item yuu">
+                            <img src="assets/images/c-3.png" alt="Fast to Deploy" />
+                        </div>
+                        <div class="logo-item getgo">
+                            <img src="assets/images/c-4.jpg" alt="Replace Legacy Systems" />
+                        </div>
+                        <div class="logo-item carsome">
+                            <img src="assets/images/c-5.png" alt="Collaborative Insights" />
+                        </div>
+                        <div class="logo-item shopback">
+                            <img src="assets/images/c-6.jpg" alt="Customizable Workflows" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             VALUE PROPOSITIONS - Stackbrains AI
+             ======================================== -->
+        <section class="solution-section" id="value-propositions">
+            <div class="solution-header">
+                <div class="solution-preheader">
+                    <div class="solution-preheader-icon"></div>
+                    <span class="solution-preheader-text">Why Stackbrains</span>
+                </div>
+                <h2 class="solution-title">Value Propositions</h2>
+            </div>
+            <div class="container">
+                <div class="bento-grid-4">
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop1.svg" alt="Designed for Manufacturing" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">Designed for Manufacturing</h3>
+                            <p class="bento-description">Built specifically for manufacturing SMEs — from sales orders to production planning, purchasing, and delivery.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop2.svg" alt="AI Embedded" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">AI Embedded into Daily Operations</h3>
+                            <p class="bento-description">AI agents work inside workflows to automate tasks and surface actionable insights.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop3.svg" alt="Fast to Deploy" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">Fast to Deploy, Easy to Use</h3>
+                            <p class="bento-description">Modern interfaces, mini-apps, and natural language input dramatically reduce adoption friction.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop4.svg" alt="Replace Legacy Systems" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">Replace Fragmented, Legacy Systems</h3>
+                            <p class="bento-description">Unify CRM and ERP into one intelligent platform that eliminates data silos and manual work.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop5.svg" alt="Collaborative Insights" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">Collaborative Insights</h3>
+                            <p class="bento-description">Foster team collaboration with shared dashboards and real-time updates, enhancing overall data management efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop6.svg" alt="Customizable Workflows" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">Customizable Workflows</h3>
+                            <p class="bento-description">Tailor data workflows to your specific needs, ensuring optimal performance and adaptability in your unique data ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop3.svg" alt="Proactive Risk Detection" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">Proactive Risk Detection</h3>
+                            <p class="bento-description">AI-driven alerts surface production delays, inventory shortfalls, and cost overruns before they escalate.</p>
+                        </div>
+                    </div>
+                    <div class="bento-box" style="min-height: 220px; justify-content: flex-start; align-items: stretch;">
+                        <div class="bento-content" style="box-shadow: none;">
+                            <img src="assets/images/value-prop1.svg" alt="End-to-End Traceability" style="width: 48px; height: 48px; margin-bottom: 12px; object-fit: contain;">
+                            <h3 class="bento-heading">End-to-End Traceability</h3>
+                            <p class="bento-description">Track every order, component, and process step from raw material to finished goods delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             OUR SOLUTION SECTION - AI Agents Features
+             ======================================== -->
+        <section class="solution-section" id="what-we-do">
+            <div class="solution-header">
+                <div class="solution-preheader">
+                    <div class="solution-preheader-icon"></div>
+                    <span class="solution-preheader-text">Our platform</span>
+                </div>
+                <h2 class="solution-title">
+                    AI Platform Built for Manufacturing Operations
+                </h2>
+            </div>
+
+            <div class="solution-cards">
+                <!-- Bento Box 1: Intelligent -->
+                <div class="bento-box">
+                    <div class="bento-img-container">
+                        <img src="assets/images/ai-agent.png" alt="AI for Manufacturing" />
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-label">Intelligent</div>
+                        <h3 class="bento-heading">
+                            AI Agents for Operational Intelligence.
+                        </h3>
+                        <p class="bento-description">
+                            Embedded AI agents continuously analyze data
+                            across sales, production, and costs to highlight
+                            risks, opportunities, and next actions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Box 2: Unified -->
+                <div class="bento-box">
+                    <div class="bento-img-container">
+                        <img src="assets/images/unified.png" alt="AI for Manufacturing" />
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-label">Unified</div>
+                        <h3 class="bento-heading">
+                            Unified Operating Platform.
+                        </h3>
+                        <p class="bento-description">
+                            A single source of truth connecting customers,
+                            orders, production plans, inventory, and
+                            procurement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Box 3: Automated -->
+                <div class="bento-box">
+                    <div class="bento-img-container">
+                        <img src="assets/images/automated.png" alt="AI for Manufacturing" />
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-label">Automated</div>
+                        <h3 class="bento-heading">
+                            Workflow Automation Engine.
+                        </h3>
+                        <p class="bento-description">
+                            Automate approvals, task handoffs, and routine
+                            operational processes across departments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Box 4: Mobile-First -->
+                <div class="bento-box">
+                    <div class="bento-img-container">
+                        <img src="assets/images/mobile-first.png" alt="AI for Manufacturing" />
+                    </div>
+                    <div class="bento-content">
+                        <div class="bento-label">Mobile-First</div>
+                        <h3 class="bento-heading">
+                            Real-Time Mini-Apps &amp; Mobile Access.
+                        </h3>
+                        <p class="bento-description">
+                            Lightweight apps deliver live insights to managers
+                            and frontline teams — anytime, anywhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             PROCESS SECTION - 3-Step Implementation
+             ======================================== -->
+        <section class="process-section" id="process">
+            <div class="process-header">
+                <div class="process-preheader">
+                    <div class="process-preheader-icon"></div>
+                    <span class="process-preheader-text">Getting started</span>
+                </div>
+                <h2 class="process-title">
+                    Start Seeing Value in Weeks, Not Months
+                </h2>
+            </div>
+
+            <div class="process-boxes-wrapper">
+                <!-- Box 1: Connect -->
+                <div class="process-box">
+                    <div class="process-box-header">
+                        <div class="process-icon scope"></div>
+                        <div class="process-box-title">Connect</div>
+                    </div>
+                    <p class="process-box-text">
+                        Integrate your existing data sources — sales,
+                        production, inventory — in days with our lightweight
+                        connectors.
+                    </p>
+                    <div class="process-box-footer">
+                        <div class="process-box-time">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>1–3 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrow 1 -->
+                <div class="process-arrow">
+                    <svg viewBox="0 0 25.058 16.705" overflow="visible">
+                        <path
+                            d="M 0 16.705 C 2.497 9.224 9.5 4.178 17.387 4.176 L 25.058 4.176"
+                            fill="transparent"
+                            stroke-width="2.79"
+                            stroke="rgb(57, 107, 246)"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M 20.882 8.353 L 25.058 4.176 L 20.882 0"
+                            fill="transparent"
+                            stroke-width="2.79"
+                            stroke="rgb(57, 107, 246)"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                    </svg>
+                </div>
+
+                <!-- Box 2: Configure -->
+                <div class="process-box">
+                    <div class="process-box-header">
+                        <div class="process-icon build"></div>
+                        <div class="process-box-title">Configure</div>
+                    </div>
+                    <p class="process-box-text">
+                        Set up AI agents and workflows tailored to your
+                        operations, team roles, and approval processes.
+                    </p>
+                    <div class="process-box-footer">
+                        <div class="process-box-note">
+                            Depending on complexity
+                        </div>
+                        <div class="process-box-time">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>1–2 weeks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrow 2 -->
+                <div class="process-arrow">
+                    <svg viewBox="0 0 25.058 16.705" overflow="visible">
+                        <path
+                            d="M 0 16.705 C 2.497 9.224 9.5 4.178 17.387 4.176 L 25.058 4.176"
+                            fill="transparent"
+                            stroke-width="2.79"
+                            stroke="rgb(57, 107, 246)"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M 20.882 8.353 L 25.058 4.176 L 20.882 0"
+                            fill="transparent"
+                            stroke-width="2.79"
+                            stroke="rgb(57, 107, 246)"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                    </svg>
+                </div>
+
+                <!-- Box 3: Operate -->
+                <div class="process-box">
+                    <div class="process-box-header">
+                        <div class="process-icon deploy"></div>
+                        <div class="process-box-title">Operate</div>
+                    </div>
+                    <p class="process-box-text">
+                        Go live with real-time insights, automated alerts,
+                        and AI-powered recommendations driving your team.
+                    </p>
+                    <div class="process-box-footer">
+                        <div class="process-box-time">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-cta">
+                <a href="https://app.youform.com/forms/vrxdmcgh" target="_blank" class="btn btn-demo">Talk to Us Today</a>
+            </div>
+        </section>
+
+        <!-- ========================================
+             TESTIMONIALS SECTION - Customer Reviews
+             ======================================== -->
+        <section
+            class="testimonials-section"
+            id="testimonials"
+            data-testid="section-testimonials"
+        >
+            <div class="testimonials-bg">
+                <img
+                    src="assets/images/testimonials-bg.png"
+                    alt=""
+                    loading="lazy"
+                />
+            </div>
+            <div class="testimonials-content">
+                <h3 class="testimonials-title">
+                    What Drives Us
+                </h3>
+                <div class="testimonials-carousel-wrapper">
+                    <button
+                        class="carousel-nav-btn prev hidden"
+                        data-testid="button-carousel-prev"
+                        aria-label="Previous testimonial"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <ul
+                        class="testimonials-carousel mask-right"
+                        id="testimonials-carousel"
+                    >
+                        <!-- Testimonial Card 1 - Founder -->
+                        <li
+                            class="testimonial-card"
+                            data-testid="card-testimonial-1"
+                        >
+                            <div class="testimonial-image">
+                                <img
+                                    src="assets/images/zhicong_new.jpeg"
+                                    alt="Zhicong Pan, Founder &amp; CEO"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-text-content">
+                                    <div class="testimonial-logo">
+                                        <img
+                                            src="assets/images/logo-1.jpg"
+                                            alt="Stackbrains AI"
+                                            style="height: 28px; width: auto;"
+                                        />
+                                        <span style="font-family: 'Gugi', sans-serif; font-size: 0.95rem; font-weight: 400; color: var(--text-dark); margin-left: 8px; vertical-align: middle;">Stackbrains AI</span>
+                                    </div>
+                                    <p class="testimonial-quote">
+                                        &ldquo;With over 15 years in data management and
+                                        analytics, I built Stackbrains to solve the
+                                        real pain I saw: brilliant manufacturers
+                                        frustrated by fragmented, outdated systems
+                                        that trapped their data and held back their
+                                        potential.&rdquo;
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <p class="testimonial-author-name">
+                                        Zhicong Pan
+                                    </p>
+                                    <p class="testimonial-author-title">
+                                        Founder &amp; CEO, Stackbrains AI
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Testimonial Card 2 - Team Member -->
+                        <li
+                            class="testimonial-card"
+                            data-testid="card-testimonial-2"
+                        >
+                            <div class="testimonial-image">
+                                <img
+                                    src="assets/images/team/user2.jpg"
+                                    alt="Stackbrains Team Member"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-text-content">
+                                    <div class="testimonial-logo">
+                                        <img
+                                            src="assets/images/logo-1.jpg"
+                                            alt="Stackbrains AI"
+                                            style="height: 28px; width: auto;"
+                                        />
+                                        <span style="font-family: 'Gugi', sans-serif; font-size: 0.95rem; font-weight: 400; color: var(--text-dark); margin-left: 8px; vertical-align: middle;">Stackbrains AI</span>
+                                    </div>
+                                    <p class="testimonial-quote">
+                                        &ldquo;Stackbrains has fundamentally changed
+                                        how our production floor communicates with
+                                        the sales team. Real-time visibility means
+                                        no more surprises on delivery dates &mdash;
+                                        our customers feel the difference
+                                        immediately.&rdquo;
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <p class="testimonial-author-name">
+                                        Team Member
+                                    </p>
+                                    <p class="testimonial-author-title">
+                                        Operations Lead, Stackbrains AI
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Testimonial Card 3 - Team Member -->
+                        <li
+                            class="testimonial-card"
+                            data-testid="card-testimonial-3"
+                        >
+                            <div class="testimonial-image">
+                                <img
+                                    src="assets/images/team/user3.jpg"
+                                    alt="Stackbrains Team Member"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-text-content">
+                                    <div class="testimonial-logo">
+                                        <img
+                                            src="assets/images/logo-1.jpg"
+                                            alt="Stackbrains AI"
+                                            style="height: 28px; width: auto;"
+                                        />
+                                        <span style="font-family: 'Gugi', sans-serif; font-size: 0.95rem; font-weight: 400; color: var(--text-dark); margin-left: 8px; vertical-align: middle;">Stackbrains AI</span>
+                                    </div>
+                                    <p class="testimonial-quote">
+                                        &ldquo;Before Stackbrains, we were losing hours
+                                        every week reconciling data across
+                                        spreadsheets. Now the AI surfaces issues
+                                        before they become problems. Our team
+                                        spends time solving, not searching.&rdquo;
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <p class="testimonial-author-name">
+                                        Team Member
+                                    </p>
+                                    <p class="testimonial-author-title">
+                                        Product Manager, Stackbrains AI
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <button
+                        class="carousel-nav-btn next"
+                        data-testid="button-carousel-next"
+                        aria-label="Next testimonial"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CASE STUDIES SECTION - Real-world Success Stories
+             ======================================== -->
+        <section
+            class="case-studies-section"
+            id="case-studies"
+            data-testid="section-case-studies"
+        >
+            <div class="case-studies-header">
+                <div class="case-studies-label">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                    >
+                        <rect x="2" y="2" width="5" height="5" rx="1" />
+                        <rect x="9" y="2" width="5" height="5" rx="1" />
+                        <rect x="2" y="9" width="5" height="5" rx="1" />
+                        <rect x="9" y="9" width="5" height="5" rx="1" />
+                    </svg>
+                    Our Impact
+                </div>
+                <h2 class="case-studies-title">
+                    Results That Move the Needle
+                </h2>
+            </div>
+
+            <div class="case-studies-cards">
+                <!-- Card 1 - Manufacturing Efficiency -->
+                <div class="case-study-card" data-testid="card-case-study-1">
+                    <div class="case-study-content">
+                        <div class="case-study-logo">
+                            <img
+                                src="assets/images/value-prop1.svg"
+                                alt="Designed for Manufacturing"
+                                style="width: 48px; height: 48px;"
+                            />
+                        </div>
+                        <p class="case-study-description">
+                            Manufacturing SMEs leveraging Stackbrains report
+                            dramatic improvements in operational efficiency
+                            and significant reduction in manual errors.
+                        </p>
+                        <div class="case-study-stats">
+                            <div class="case-study-stat">
+                                <div class="stat-value">
+                                    <span class="stat-number">+10X</span>
+                                </div>
+                                <span class="stat-label">Efficiency</span>
+                            </div>
+                            <div class="case-study-stat">
+                                <div class="stat-value">
+                                    <span class="stat-number">-40</span>
+                                    <span class="stat-percent">%</span>
+                                </div>
+                                <span class="stat-label">Rework</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-image">
+                        <img
+                            src="assets/images/smes.png"
+                            alt="AI for Manufacturing"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+                <!-- Card 2 - AI Monitoring (reversed) -->
+                <div
+                    class="case-study-card reversed"
+                    data-testid="card-case-study-2"
+                >
+                    <div class="case-study-content">
+                        <div class="case-study-logo">
+                            <img
+                                src="assets/images/value-prop2.svg"
+                                alt="AI Embedded into Operations"
+                                style="width: 48px; height: 48px;"
+                            />
+                        </div>
+                        <p class="case-study-description">
+                            AI agents surface risks before they become costly
+                            production issues or delivery delays &mdash;
+                            running 24/7 across your operations.
+                        </p>
+                        <div class="case-study-stats">
+                            <div class="case-study-stat">
+                                <div class="stat-value">
+                                    <span class="stat-number">+85</span>
+                                    <span class="stat-percent">%</span>
+                                </div>
+                                <span class="stat-label"
+                                    >Operational Visibility</span
+                                >
+                            </div>
+                            <div class="case-study-stat">
+                                <div class="stat-value">
+                                    <span class="stat-number">24</span>
+                                    <span class="stat-percent">/7</span>
+                                </div>
+                                <span class="stat-label">AI Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-image">
+                        <img
+                            src="assets/images/operations.png"
+                            alt="AI Monitoring"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+                <!-- Card 3 - Fast Adoption -->
+                <div class="case-study-card" data-testid="card-case-study-3">
+                    <div class="case-study-content">
+                        <div class="case-study-logo">
+                            <img
+                                src="assets/images/value-prop3.svg"
+                                alt="Fast to Deploy"
+                                style="width: 48px; height: 48px;"
+                            />
+                        </div>
+                        <p class="case-study-description">
+                            Teams adopt Stackbrains quickly &mdash; natural
+                            language interface and mini-apps mean minimal
+                            training and maximum impact from day one.
+                        </p>
+                        <div class="case-study-stats">
+                            <div class="case-study-stat">
+                                <div class="stat-value">
+                                    <span class="stat-number">2&ndash;4</span>
+                                    <span class="stat-percent">wks</span>
+                                </div>
+                                <span class="stat-label"
+                                    >Deploy Time</span
+                                >
+                            </div>
+                            <div class="case-study-stat">
+                                <div class="stat-value">
+                                    <span class="stat-number">+95</span>
+                                    <span class="stat-percent">%</span>
+                                </div>
+                                <span class="stat-label">User Adoption</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-image">
+                        <img
+                            src="assets/images/teams.png"
+                            alt="Fast Adoption"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             FAQ SECTION - Stackbrains AI
+             ======================================== -->
+        <section class="case-studies-section" id="faq">
+            <div class="case-studies-header">
+                <div class="case-studies-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="2" width="5" height="5" rx="1" />
+                        <rect x="9" y="2" width="5" height="5" rx="1" />
+                        <rect x="2" y="9" width="5" height="5" rx="1" />
+                        <rect x="9" y="9" width="5" height="5" rx="1" />
+                    </svg>
+                    FAQ
+                </div>
+                <h2 class="case-studies-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-md-6">
+                        <div style="display: flex; gap: 16px; padding: 24px; background: #fff; border: 1px solid #d0d2d6; border-radius: 16px; height: 100%;">
+                            <img src="assets/images/faq-icon.svg" alt="FAQ" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px;">What is Stackbrains, and how can it help my business?</h4>
+                                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">Stackbrains is an advanced AI-native operating platform designed to empower SME manufacturers to improve efficiency by 10X. It allows our SME customers to make informed decisions based on accurate, reliable and real-time data insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="display: flex; gap: 16px; padding: 24px; background: #fff; border: 1px solid #d0d2d6; border-radius: 16px; height: 100%;">
+                            <img src="assets/images/faq-icon.svg" alt="FAQ" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px;">How does Stackbrains ensure data security and trust?</h4>
+                                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">Stackbrains uses custom quality checks, machine learning-based monitoring, and AI-driven solutions to proactively identify and resolve data inconsistencies, ensuring your data is always accurate and trustworthy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="display: flex; gap: 16px; padding: 24px; background: #fff; border: 1px solid #d0d2d6; border-radius: 16px; height: 100%;">
+                            <img src="assets/images/faq-icon.svg" alt="FAQ" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px;">Can Stackbrains integrate with my existing data infrastructure?</h4>
+                                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">Yes, Stackbrains integrates seamlessly with your existing data stack &mdash; whether cloud-based warehouses, on-premises databases, or a hybrid approach &mdash; providing comprehensive observability across all your data sources.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="display: flex; gap: 16px; padding: 24px; background: #fff; border: 1px solid #d0d2d6; border-radius: 16px; height: 100%;">
+                            <img src="assets/images/faq-icon.svg" alt="FAQ" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px;">How does Stackbrains handle data security during implementation?</h4>
+                                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">All data connections are encrypted, access controls are properly configured, and only authorized users have access to sensitive data. We provide audit logs to track user activities and data changes throughout.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="display: flex; gap: 16px; padding: 24px; background: #fff; border: 1px solid #d0d2d6; border-radius: 16px; height: 100%;">
+                            <img src="assets/images/faq-icon.svg" alt="FAQ" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px;">How long does it take to fully implement Stackbrains?</h4>
+                                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">Initial setup can be completed within a few days, with full implementation &mdash; including custom configurations and user training &mdash; taking between 2 and 4 weeks, depending on your operations&rsquo; complexity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="display: flex; gap: 16px; padding: 24px; background: #fff; border: 1px solid #d0d2d6; border-radius: 16px; height: 100%;">
+                            <img src="assets/images/faq-icon.svg" alt="FAQ" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px;">What are the system requirements for deploying Stackbrains?</h4>
+                                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">Stackbrains is flexible and can be deployed on cloud platforms (AWS, GCP, Azure) or on-premises servers. Requirements depend on your data scale, but the platform is built for efficiency with minimal infrastructure overhead.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CTA SECTION - Call to Action
+             ======================================== -->
+        <section class="cta-section" id="cta">
+            <div class="cta-container">
+                <img
+                    src="assets/images/cta-bg.png"
+                    alt="Background"
+                    class="cta-bg"
+                />
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Business With Real Impacts?</h2>
+                    <p class="cta-text">
+                        Join the revolution in embracing the future of AI-driven Operating Platform with Stackbrains AI
+                    </p>
+                    <a href="https://app.youform.com/forms/vrxdmcgh" target="_blank" class="cta-btn">Talk to us Today!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             FOOTER SECTION
+             ======================================== -->
+        <div id="toggle-consent-btn" class="consentbit-change-preference"></div>
+
+        <!-- ========================================
+             COOKIE & TERMS CONSENT MODAL
+             ======================================== -->
+        <div class="consent-overlay" id="consentOverlay"></div>
+        <div class="consent-modal" id="consentModal" role="dialog" aria-modal="true" aria-labelledby="consentTitle">
+            <div class="consent-modal-header">
+                <div class="consent-modal-logo">
+                    <img src="assets/images/logo-1.jpg" alt="Stackbrains AI" style="height:28px;width:auto;">
+                    <span style="font-family:'Gugi',sans-serif;font-size:1rem;font-weight:400;color:#fff;margin-left:8px;">Stackbrains AI</span>
+                </div>
+                <button class="consent-modal-close" id="consentClose" aria-label="Close">&times;</button>
+            </div>
+            <div class="consent-modal-body">
+                <h2 id="consentTitle" class="consent-title">Cookie &amp; Privacy Preferences</h2>
+                <p class="consent-desc">We use cookies and similar technologies to improve your experience, analyse traffic, and personalise content. By clicking <strong>Accept All</strong> you consent to our use of cookies. You may also manage your preferences or read our full policy below.</p>
+
+                <div class="consent-toggles">
+                    <div class="consent-toggle-row">
+                        <div class="consent-toggle-info">
+                            <p class="consent-toggle-label">Strictly Necessary</p>
+                            <p class="consent-toggle-desc">Required for the website to function. Cannot be disabled.</p>
+                        </div>
+                        <label class="consent-switch disabled" title="Always active">
+                            <input type="checkbox" checked disabled>
+                            <span class="consent-slider"></span>
+                        </label>
+                    </div>
+                    <div class="consent-toggle-row">
+                        <div class="consent-toggle-info">
+                            <p class="consent-toggle-label">Analytics &amp; Performance</p>
+                            <p class="consent-toggle-desc">Helps us understand how visitors use our site so we can improve it.</p>
+                        </div>
+                        <label class="consent-switch">
+                            <input type="checkbox" id="analyticsConsent" checked>
+                            <span class="consent-slider"></span>
+                        </label>
+                    </div>
+                    <div class="consent-toggle-row">
+                        <div class="consent-toggle-info">
+                            <p class="consent-toggle-label">Marketing &amp; Targeting</p>
+                            <p class="consent-toggle-desc">Used to deliver personalised ads and track campaign performance.</p>
+                        </div>
+                        <label class="consent-switch">
+                            <input type="checkbox" id="marketingConsent">
+                            <span class="consent-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="consent-legal">
+                    <p>By using this site you agree to our
+                        <a href="#" class="consent-link">Terms &amp; Conditions</a> and
+                        <a href="#" class="consent-link">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="consent-modal-footer">
+                <button class="consent-btn-secondary" id="consentReject">Reject Non-Essential</button>
+                <button class="consent-btn-secondary" id="consentCustom">Save Preferences</button>
+                <button class="consent-btn-primary" id="consentAccept">Accept All</button>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>Copyright © Stackbrains Pte. Ltd. 2026 All Rights Reserved</p>
-        </div>
-    </footer>
 
-    <!-- Customer Support Chat Widget -->
-    <div class="chat-widget">
-        <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-                <path d="M7 9h10v2H7zm0-3h10v2H7z"/>
-            </svg>
-        </button>
-    </div>
 
-    <div class="chat-overlay" id="chatOverlay"></div>
-
-    <div class="chat-modal" id="chatModal">
-        <div class="chat-modal-header">
-            <div class="chat-modal-title">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-                </svg>
-                Customer Support
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">
+                        <img src="assets/images/logo-1.jpg" alt="Stackbrains Logo">
+                        <span class="company-name">Stackbrains AI</span>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/company/stackbrains-ai/" target="_blank" class="linkedin">
+                            <img src="assets/images/linkedin_logo.webp" alt="LinkedIn">
+                        </a>
+                        <!--                    <a href="#" class="twitter">-->
+                        <!--                        <img src="assets/images/twitter_logo.svg" alt="Twitter">-->
+                        <!--                    </a>-->
+                    </div>
+                </div>
+                <nav class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="product.html">Solution</a>
+                    <a href="integrations.html">Process</a>
+                    <a href="about.html">About Us</a>
+                </nav>
+                <div class="footer-contact">
+                    <a href="mailto:support@stackbrains.ai" class="email">support@stackbrains.ai</a>
+                    <a href="tel:+6590884192" class="phone">+65 9088 4192</a>
+                </div>
             </div>
-            <button class="chat-modal-close" id="chatClose" aria-label="Close chat">×</button>
+            <div class="footer-bottom">
+                <p>Copyright &copy; Stackbrains Pte. Ltd. 2026 All Rights Reserved</p>
+            </div>
+        </footer>
+
+
+        <!-- ========================================
+             SCRIPTS SECTION
+             ======================================== -->
+
+        <!-- Customer Support Chat Widget -->
+        <div class="chat-widget">
+            <button class="chat-toggle" id="chatToggle" aria-label="Open chat" style="background:none;border:none;padding:0;box-shadow:none;">
+                <img src="assets/images/chat-icon.png" alt="Chat" style="width:60px;height:60px;object-fit:contain;display:block;">
+            </button>
         </div>
-        <div class="chat-modal-body">
-            <iframe src="https://customersupportapi.inteldiscover.com/chat/dbeac999-2a55-41da-b424-74ec4d015860" frameborder="0"></iframe>
+        <div class="chat-overlay" id="chatOverlay"></div>
+        <div class="chat-modal" id="chatModal">
+            <div class="chat-modal-header" style="background: var(--bg-gradient); color: white; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+                    Customer Support
+                </div>
+                <button id="chatClose" style="background:none;border:none;color:white;font-size:22px;cursor:pointer;opacity:0.8;padding:0 4px;" aria-label="Close chat">&times;</button>
+            </div>
+            <div style="flex:1;overflow:hidden;">
+                <iframe src="https://customersupportapi.inteldiscover.com/chat/dbeac999-2a55-41da-b424-74ec4d015860" frameborder="0" style="width:100%;height:100%;border:none;display:block;"></iframe>
+            </div>
         </div>
-    </div>
 
-    <script>
-        // Chat Widget Toggle
-        const chatToggle = document.getElementById('chatToggle');
-        const chatModal = document.getElementById('chatModal');
-        const chatClose = document.getElementById('chatClose');
-        const chatOverlay = document.getElementById('chatOverlay');
+        <!-- ========================================
+             SCRIPTS SECTION
+             ======================================== -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Close Top Banner
+            document.addEventListener("DOMContentLoaded", function () {
+                const closeBtn = document.querySelector(".top-banner .close-btn");
+                const topBanner = document.querySelector(".top-banner");
+                
+                if (closeBtn && topBanner) {
+                    closeBtn.addEventListener("click", function () {
+                        topBanner.style.transition = "all 0.3s ease";
+                        topBanner.style.maxHeight = topBanner.offsetHeight + "px";
+                        topBanner.offsetHeight; // Force reflow
+                        topBanner.style.maxHeight = "0";
+                        topBanner.style.padding = "0";
+                        topBanner.style.overflow = "hidden";
+                        topBanner.style.opacity = "0";
+                    });
+                }
+            });
 
-        function openChat() {
-            chatModal.classList.add('active');
-            chatOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+            // Testimonials Carousel Navigation
+            document.addEventListener("DOMContentLoaded", function () {
+                const carousel = document.getElementById(
+                    "testimonials-carousel",
+                );
+                const prevBtn = document.querySelector(
+                    ".carousel-nav-btn.prev",
+                );
+                const nextBtn = document.querySelector(
+                    ".carousel-nav-btn.next",
+                );
 
-        function closeChat() {
-            chatModal.classList.remove('active');
-            chatOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+                if (carousel && prevBtn && nextBtn) {
+                    const updateNavButtons = () => {
+                        const scrollLeft = carousel.scrollLeft;
+                        const maxScroll =
+                            carousel.scrollWidth - carousel.clientWidth;
 
-        chatToggle.addEventListener('click', openChat);
-        chatClose.addEventListener('click', closeChat);
-        chatOverlay.addEventListener('click', closeChat);
+                        // Show/hide prev button based on scroll position
+                        if (scrollLeft <= 10) {
+                            prevBtn.classList.add("hidden");
+                            carousel.classList.add("mask-right");
+                            carousel.classList.remove("mask-left");
+                        } else if (scrollLeft >= maxScroll - 10) {
+                            prevBtn.classList.remove("hidden");
+                            nextBtn.classList.add("hidden");
+                            carousel.classList.add("mask-left");
+                            carousel.classList.remove("mask-right");
+                        } else {
+                            prevBtn.classList.remove("hidden");
+                            nextBtn.classList.remove("hidden");
+                            carousel.classList.remove(
+                                "mask-left",
+                                "mask-right",
+                            );
+                        }
+                    };
 
-        // Close chat on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeChat();
-            }
-        });
-    </script>
-</main>
-</body>
+                    prevBtn.addEventListener("click", () => {
+                        const cardWidth =
+                            carousel.querySelector(".testimonial-card")
+                                .offsetWidth + 24;
+                        carousel.scrollBy({
+                            left: -cardWidth,
+                            behavior: "smooth",
+                        });
+                    });
+
+                    nextBtn.addEventListener("click", () => {
+                        const cardWidth =
+                            carousel.querySelector(".testimonial-card")
+                                .offsetWidth + 24;
+                        carousel.scrollBy({
+                            left: cardWidth,
+                            behavior: "smooth",
+                        });
+                    });
+
+                    carousel.addEventListener("scroll", updateNavButtons);
+                    updateNavButtons();
+                }
+            });
+
+            // Chat Widget Toggle
+            (function() {
+                var chatToggle = document.getElementById('chatToggle');
+                var chatModal = document.getElementById('chatModal');
+                var chatClose = document.getElementById('chatClose');
+                var chatOverlay = document.getElementById('chatOverlay');
+                function openChat() { chatModal.style.display = 'flex'; chatOverlay.style.display = 'block'; document.body.style.overflow = 'hidden'; }
+                function closeChat() { chatModal.style.display = 'none'; chatOverlay.style.display = 'none'; document.body.style.overflow = ''; }
+                chatToggle.addEventListener('click', openChat);
+                chatClose.addEventListener('click', closeChat);
+                chatOverlay.addEventListener('click', closeChat);
+                document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeChat(); });
+            })();
+
+            // Cookie Consent Modal
+            (function() {
+                var modal = document.getElementById('consentModal');
+                var overlay = document.getElementById('consentOverlay');
+                var triggerBtn = document.getElementById('toggle-consent-btn');
+                var closeBtn = document.getElementById('consentClose');
+                var acceptBtn = document.getElementById('consentAccept');
+                var rejectBtn = document.getElementById('consentReject');
+                var customBtn = document.getElementById('consentCustom');
+                var CONSENT_KEY = 'sb_consent';
+
+                function openConsent() {
+                    modal.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeConsent() {
+                    modal.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                function saveConsent(analytics, marketing) {
+                    localStorage.setItem(CONSENT_KEY, JSON.stringify({ analytics: analytics, marketing: marketing, ts: Date.now() }));
+                    closeConsent();
+                }
+
+                if (triggerBtn) triggerBtn.addEventListener('click', openConsent);
+                if (closeBtn) closeBtn.addEventListener('click', closeConsent);
+                if (overlay) overlay.addEventListener('click', closeConsent);
+                if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true, true); });
+                if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false, false); });
+                if (customBtn) customBtn.addEventListener('click', function() {
+                    var a = document.getElementById('analyticsConsent');
+                    var m = document.getElementById('marketingConsent');
+                    saveConsent(a ? a.checked : false, m ? m.checked : false);
+                });
+                document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeConsent(); });
+
+                // Auto-show on first visit
+                if (!localStorage.getItem(CONSENT_KEY)) {
+                    setTimeout(openConsent, 800);
+                }
+            })();
+
+            // FAQ Accordion — closed by default, smooth toggle on click
+            (function() {
+                var faqSection = document.getElementById('faq');
+                if (!faqSection) return;
+
+                // Collect all FAQ answer paragraphs and wrap for animation
+                var faqItems = faqSection.querySelectorAll('.col-md-6 > div');
+                faqItems.forEach(function(card) {
+                    var heading = card.querySelector('h4');
+                    var answer  = card.querySelector('p');
+                    if (!heading || !answer) return;
+
+                    // Style the answer for smooth height animation
+                    answer.style.overflow    = 'hidden';
+                    answer.style.maxHeight   = '0';
+                    answer.style.marginTop   = '0';
+                    answer.style.transition  = 'max-height 0.35s ease, margin-top 0.35s ease, opacity 0.3s ease';
+                    answer.style.opacity     = '0';
+
+                    // Style the heading as interactive
+                    heading.style.cursor    = 'pointer';
+                    heading.style.userSelect = 'none';
+                    heading.style.display   = 'flex';
+                    heading.style.justifyContent = 'space-between';
+                    heading.style.alignItems     = 'center';
+                    heading.style.marginBottom   = '0';
+
+                    // Add chevron indicator
+                    var chevron = document.createElement('span');
+                    chevron.setAttribute('aria-hidden', 'true');
+                    chevron.style.cssText = 'display:inline-block;transition:transform 0.3s ease;flex-shrink:0;margin-left:10px;color:#396bf6;font-size:18px;line-height:1;';
+                    chevron.innerHTML = '&#8250;';
+                    heading.appendChild(chevron);
+
+                    heading.addEventListener('click', function() {
+                        var isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '0';
+                        if (isOpen) {
+                            answer.style.maxHeight  = '0';
+                            answer.style.marginTop  = '0';
+                            answer.style.opacity    = '0';
+                            chevron.style.transform = 'rotate(0deg)';
+                        } else {
+                            answer.style.maxHeight  = answer.scrollHeight + 'px';
+                            answer.style.marginTop  = '10px';
+                            answer.style.opacity    = '1';
+                            chevron.style.transform = 'rotate(90deg)';
+                        }
+                    });
+                });
+            })();
+        </script>
+    </body>
 </html>
