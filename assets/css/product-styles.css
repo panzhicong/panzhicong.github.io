@@ -5,7 +5,7 @@
     align-items: center;
     padding: 4rem 5%;
     background-color: var(--site-background-color);
-    background-image: url('../images/hero-bg.png');
+    background-image: url('../images/hero-bg.webp');
     background-size: cover;
     background-position: center bottom;
     margin: 0 5%;
@@ -18,7 +18,7 @@
     margin-bottom: 3rem;
 }
 
-.product-hero h4 {
+.product-hero-eyebrow {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-secondary);

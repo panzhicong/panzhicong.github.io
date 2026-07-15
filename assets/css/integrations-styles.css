@@ -37,6 +37,7 @@
 }
 
 .integration-page-contact-us {
+    display: inline-block;
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
@@ -46,6 +47,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .integration-page-contact-us:hover {
@@ -465,6 +467,7 @@
 }
 
 .process-box-title {
+    margin: 0;
     font-size: 18px;
     font-weight: 600;
     color: rgb(57, 107, 246);

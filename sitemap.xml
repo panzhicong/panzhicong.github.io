@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.stackbrains.ai/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <image:image>
+      <image:loc>https://www.stackbrains.ai/assets/images/hero_laptop_home_page.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.stackbrains.ai/product.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <image:image>
+      <image:loc>https://www.stackbrains.ai/assets/images/hero_aiops_stackbrains.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.stackbrains.ai/integrations.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <image:image>
+      <image:loc>https://www.stackbrains.ai/assets/images/integrations_banner.avif</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.stackbrains.ai/about.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <image:image>
+      <image:loc>https://www.stackbrains.ai/assets/images/zhicong-1.png</image:loc>
+    </image:image>
+  </url>
+</urlset>
